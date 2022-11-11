@@ -1,0 +1,24 @@
+.button {
+  max-width: 216px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border: none;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: color 250ms var(--transition-timing-function),
+    background-color 250ms var(--transition-timing-function);
+
+&:hover,
+&:focus {
+  color: var(--primary-white-color);
+  background-color: var(--background-blue-color);
+  cursor: pointer;
+}
+}
