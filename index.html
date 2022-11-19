@@ -31,7 +31,7 @@
         </div>
         <button
           type="button"
-          class="header__button js-menu-container is-open"
+          class="header__button js-open-menu is-open"
           aria-disabled="false"
           aria-controls="header__menu"
         >
@@ -41,16 +41,17 @@
             aria-label="Переключатель мобильного меню"
           >
             <use
-              class="header__icon--close js-close-menu"
+              class="header__icon--close"
               href="./img/icons.svg#icon-close-mobile"
             ></use>
             <use
-              class="header__icon--menu js-open-menu"
+              class="header__icon--menu"
               href="./img/icons.svg#icon-menu-mobile"
             ></use>
           </svg>
         </button>
         <div class="header__menu is-open js-menu-container" id="header__menu">
+          <button class="js-close-menu"></button>
           MENU
         </div>
         <nav>
