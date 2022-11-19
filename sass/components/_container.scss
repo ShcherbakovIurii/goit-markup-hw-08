@@ -1,5 +1,29 @@
 .container {
   margin: 0 auto;
   padding: 0 15px;
+  min-width: 320px;
   max-width: 1230px;
+
+ 
+}
+
+.section {
+   padding: 60px 0;
+//   padding: 94px 0;
+  color: var(--secondary-text-color);
+
+  &__title {
+   margin-bottom: 30px;
+//   margin-bottom: 50px;
+
+  color: var(--title-text-color);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+//   font-size: 36px;
+//   line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  }
 }
