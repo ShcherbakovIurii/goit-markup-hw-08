@@ -1,13 +1,17 @@
 
 .client {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
   list-style: none;
+  
 
   &__card {
-  width: 170px;
-  height: 92px;
+    width: 210px;
+    height: 92px;
+  // width: 170px;
+  
 }
 
 &__link {

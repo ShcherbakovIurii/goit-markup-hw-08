@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!-- Шапка сайту -->
@@ -28,6 +28,30 @@
           <a href="#" class="header__link"
             >Web<span class="header__special">Studio</span></a
           >
+        </div>
+        <button
+          type="button"
+          class="header__button js-menu-container is-open"
+          aria-disabled="false"
+          aria-controls="header__menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="header__icon--close js-close-menu"
+              href="./img/icons.svg#icon-close-mobile"
+            ></use>
+            <use
+              class="header__icon--menu js-open-menu"
+              href="./img/icons.svg#icon-menu-mobile"
+            ></use>
+          </svg>
+        </button>
+        <div class="header__menu is-open js-menu-container" id="header__menu">
+          MENU
         </div>
         <nav>
           <ul class="nav">
@@ -146,7 +170,7 @@
             </li>
             <li class="works__item">
               <img
-              srcset="./img/Photocomp2.png 1x, ./img/Photocomp2@2x.png 2x"
+                srcset="./img/Photocomp2.png 1x, ./img/Photocomp2@2x.png 2x"
                 src="./img/Photocomp2.png"
                 alt="Computer"
                 width="370"
@@ -156,7 +180,7 @@
             </li>
             <li class="works__item">
               <img
-              srcset="./img/Photocomp3.png 1x, ./img/Photocomp3@2x.png 2x"
+                srcset="./img/Photocomp3.png 1x, ./img/Photocomp3@2x.png 2x"
                 src="./img/Photocomp3.png"
                 alt="Computer"
                 width="370"
@@ -392,7 +416,7 @@
     </main>
     <!-- Футер -->
     <footer class="footer">
-      <div class="container">
+      <div class="container section">
         <div class="footer__container">
           <div class="address">
             <div class="address__logo">
@@ -554,7 +578,7 @@
       </div>
     </div>
     <!-- Скрипт -->
-    <script defer src="js/mobile-menu.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
