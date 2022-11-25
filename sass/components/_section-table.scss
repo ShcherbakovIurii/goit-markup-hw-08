@@ -1,33 +1,43 @@
 .table {
-  width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
   &__item {
+    
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    justify-content: space-between;
   }
 }
 
 .card {
   position: relative;
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid var(--border-color);
+
+  @media screen and (min-width:768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  
+   @media screen and (min-width: 1200px) {
+flex-basis: calc((100% - 60px) / 3);
 
   &:nth-child(3n) {
     margin-right: 0;
   }
+   }
 
-  &:nth-last-child(-n + 3) {
+&:last-child {
     margin-bottom: 0;
   }
 
-  .card__link {
+   @media screen and (min-width: 1200px) {
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+  }
+  &__link {
     text-decoration: none;
     transition: box-shadow 250ms var(--transition-timing-function);
 
@@ -45,6 +55,10 @@
   &__image {
     position: relative;
     overflow: hidden;
+
+   @media screen and (min-width: 1200px) {
+   width: 370px;
+  }
   }
 
   &__overlay {

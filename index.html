@@ -29,13 +29,30 @@
             >Web<span class="header__special">Studio</span></a
           >
         </div>
+        <!-- Burger-menu -->
         <button
           type="button"
-          class="header__button js-open-menu is-open"
-          aria-disabled="false"
-          aria-controls="header__menu"
+          class="header__button js-open-menu"
+          aria-expanded="true"
+          aria-controls="mobile-menu"
         >
           <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="header__icon--menu"
+              href="./img/icons.svg#icon-menu-mobile"
+            ></use>
+          </svg>
+        </button>
+        <!-- Mobile-menu -->
+        <div 
+        class="header__menu js-menu-container is-open" 
+        id="mobile-menu">
+          <button 
+          class="header__button js-close-menu"><svg
             width="40"
             height="40"
             aria-label="Переключатель мобильного меню"
@@ -44,15 +61,49 @@
               class="header__icon--close"
               href="./img/icons.svg#icon-close-mobile"
             ></use>
-            <use
-              class="header__icon--menu"
-              href="./img/icons.svg#icon-menu-mobile"
-            ></use>
           </svg>
         </button>
-        <div class="header__menu is-open js-menu-container" id="header__menu">
-          <button class="js-close-menu"></button>
-          MENU
+          <div class="mobile-menu">
+         <nav>
+          <ul class="mobile-menu-nav">
+            <li class="mobile-menu-nav__item">
+              <a href="#" class="mobile-menu-nav__link mobile-menu-nav__link--current">Студія</a>
+            </li>
+            <li class="mobile-menu-nav__item">
+              <a href="./portfolio.html" class="mobile-menu-nav__link">Портфоліо</a>
+            </li>
+            <li class="mobile-menu-nav__item">
+              <a href="#" class="mobile-menu-nav__link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile-menu-aside">
+          <li class="mobile-menu-aside__item">
+            <a href="tel:+380961111111" class="mobile-menu-aside__link mobile-menu-aside__link--current">
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-menu-aside__item">
+            <a href="mailto:info@devstudio.com" class="mobile-menu-aside__link">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-menu__soc-menu">
+          <li class="mobile-menu__soc-item">
+            <a class="mobile-menu__soc-link" href="#">Instagram</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a class="mobile-menu__soc-link" href="#">Twitter</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a class="mobile-menu__soc-link" href="#">Facebook</a>
+          </li>
+          <li class="mobile-menu__soc-item">
+            <a class="mobile-menu__soc-link" href="#">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
         </div>
         <nav>
           <ul class="nav">
@@ -93,7 +144,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button" type="button" data-modal-open>
+          <button class="button hero__button" type="button" data-modal-open>
             Замовити послугу
           </button>
         </div>
@@ -160,9 +211,10 @@
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="works">
             <li class="works__item">
+              
               <img
-                srcset="./img/Photocomp1.png 1x, ./img/Photocomp1@2x.png 2x"
-                src="./img/Photocomp1.png"
+                srcset="./img/Photocomp1-desktop.png 1x, ./img/Photocomp1-desktop@2x.png 2x"
+                src="./img/Photocomp1-desktop.png"
                 alt="Computer"
                 width="370"
                 height="294"
@@ -171,8 +223,8 @@
             </li>
             <li class="works__item">
               <img
-                srcset="./img/Photocomp2.png 1x, ./img/Photocomp2@2x.png 2x"
-                src="./img/Photocomp2.png"
+                srcset="./img/Photocomp2-desktop.png 1x, ./img/Photocomp2-desktop@2x.png 2x"
+                src="./img/Photocomp2-desktop.png"
                 alt="Computer"
                 width="370"
                 height="294"
@@ -181,7 +233,7 @@
             </li>
             <li class="works__item">
               <img
-                srcset="./img/Photocomp3.png 1x, ./img/Photocomp3@2x.png 2x"
+                srcset="./img/Photocomp3-desktop.png 1x, ./img/Photocomp3-desktop@2x.png 2x"
                 src="./img/Photocomp3.png"
                 alt="Computer"
                 width="370"
@@ -198,13 +250,19 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__card">
-              <img
+              <picture>
+                <source srcset="./img/IgorD-desktop.jpg 1x, ./img/IgorD-desktop@2x.jpg 2x" 
+                media="(min-width: 1200px)">
+                <source srcset="./img/IgorD-tablet.jpg 1x, ./img/IgorD-tablet@2x.jpg 2x" 
+                media="(min-width: 768px)">
+                <source srcset="./img/IgorD-mobile.jpg 1x, ./img/IgorD-mobile@2x.jpg 2x"  
+                media="(max-width: 767px)">
+                <img 
                 class="team__image"
-                srcset="./img/IgorD.jpg 1x, ./img/IgorD@2x.jpg 2x"
-                src="./img/IgorD.jpg"
-                alt="Ігор Дем'яненко"
-                width="260"
-              />
+                src="./img/IgorD-mobile.jpg" 
+                alt="Ігор Дем'яненко" 
+                />
+              </picture>
               <h3 class="team__title">Ігор Дем'яненко</h3>
               <p class="team__text">Product Designer</p>
               <ul class="social">
@@ -239,13 +297,19 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
+              <picture>
+                <source srcset="./img/OlgaR-desktop.jpg 1x, ./img/OlgaR-desktop@2x.jpg 2x" 
+                media="(min-width: 1200px)">
+                <source srcset="./img/OlgaR-tablet.jpg 1x, ./img/OlgaR-tablet@2x.jpg 2x" 
+                media="(min-width: 768px)">
+                <source srcset="./img/OlgaR-mobile.jpg 1x, ./img/OlgaR-mobile@2x.jpg 2x"  
+                media="(max-width: 767px)">
+                <img 
                 class="team__image"
-                srcset="./img/OlgaR.jpg 1x, ./img/OlgaR@2x.jpg 2x"
-                src="./img/OlgaR.jpg"
+                src="./img/OlgaR-mobile.jpg" 
                 alt="Ольга Рєпіна"
-                width="260"
-              />
+                />
+              </picture>
               <h3 class="team__title">Ольга Рєпіна</h3>
               <p class="team__text">Frontend Developer</p>
               <ul class="social">
@@ -280,13 +344,19 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
+              <picture>
+                <source srcset="./img/MikeT-desktop.jpg 1x, ./img/MikeT-desktop@2x.jpg 2x" 
+                media="(min-width: 1200px)">
+                <source srcset="./img/MikeT-tablet.jpg 1x, ./img/MikeT-tablet@2x.jpg 2x" 
+                media="(min-width: 768px)">
+                <source srcset="./img/MikeT-mobile.jpg 1x, ./img/MikeT-mobile@2x.jpg 2x"  
+                media="(max-width: 767px)">
+                <img 
                 class="team__image"
-                srcset="./img/MikeT.jpg 1x, ./img/MikeT@2x.jpg 2x"
-                src="./img/MikeT.jpg"
+                src="./img/MikeT-mobile.jpg" 
                 alt="Микола Тарасов"
-                width="260"
-              />
+                />
+              </picture>
               <h3 class="team__title">Микола Тарасов</h3>
               <p class="team__text">Marketing</p>
               <ul class="social">
@@ -321,13 +391,19 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
+              <picture>
+                <source srcset="./img/MihaE-desktop.jpg 1x, ./img/MihaE-desktop@2x.jpg 2x" 
+                media="(min-width: 1200px)">
+                <source srcset="./img/MihaE-tablet.jpg 1x, ./img/MihaE-tablet@2x.jpg 2x" 
+                media="(min-width: 768px)">
+                <source srcset="./img/MihaE-mobile.jpg 1x, ./img/MihaE-mobile@2x.jpg 2x"  
+                media="(max-width: 767px)">
+                <img 
                 class="team__image"
-                srcset="./img/MihaE.jpg 1x, ./img/MihaE@2x.jpg 2x"
-                src="./img/MihaE.jpg"
+                src="./img/MihaE-mobile.jpg" 
                 alt="Михайло Єрмаков"
-                width="260"
-              />
+                />
+              </picture>
               <h3 class="team__title">Михайло Єрмаков</h3>
               <p class="team__text">UI Designer</p>
               <ul class="social">
@@ -579,6 +655,12 @@
       </div>
     </div>
     <!-- Скрипт -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>

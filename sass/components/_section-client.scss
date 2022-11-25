@@ -2,16 +2,23 @@
 .client {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 30px;
   list-style: none;
+  justify-content: center;
   
 
   &__card {
-    width: 210px;
     height: 92px;
-  // width: 170px;
+    flex-basis: calc((100% - 30px)/2);
+
+  @media screen and (min-width: 768px) {
+
+    flex-basis: calc((100% - 60px)/3);
+  }
   
+  @media screen and (min-width: 1200px) {
+    max-width: 170px;
+  }
 }
 
 &__link {
