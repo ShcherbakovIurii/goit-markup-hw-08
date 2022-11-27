@@ -1,15 +1,10 @@
 .section-hidden{
+
+  padding-top: 0;
+
   @media screen and (max-width:1199px) {
   display: none;
   }
-}
-
-.filter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 34px;
 }
 
 .works {

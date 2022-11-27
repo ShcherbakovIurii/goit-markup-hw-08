@@ -1,6 +1,12 @@
 .footer {
   background-color: var(--background-black-color);
 
+  &__section {
+    padding: 60px 15px;
+
+  
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -11,18 +17,25 @@
 
 .address {
 
-  @media screen and (min-width:768px) {
-    margin-right: 165px;
-    }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 60px;
+    padding-right: 109px;
+    padding-left: 109px;
+  }
 
-    @media screen and (min-width:1200px) {
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+
+  }
+
+  @media screen and (min-width: 1200px) {
     margin-right: 70px;
-    }
-  
+  text-align: start;
+
+  }
 
   &__logo {
     margin-bottom: 20px;
-    
   }
 
   &__link {
@@ -34,9 +47,9 @@
     text-decoration: none;
     transition: color 250ms var(--transition-timing-function);
 
-   @media screen and (min-width:768px) and (max-width:1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       font-size: 24px;
-    line-height: 1.17;
+      line-height: 1.17;
     }
   }
 
@@ -53,9 +66,9 @@
       color: var(--accent-color);
     }
 
-    @media screen and (min-width:768px) and (max-width:1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       font-size: 24px;
-    line-height: 1.17;
+      line-height: 1.17;
     }
   }
 
@@ -66,14 +79,13 @@
   &__item {
     margin-bottom: 8px;
 
-    @media screen and (min-width:768px) {
-    margin-bottom: 9px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 9px;
     }
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
-
   }
 
   &__map {
@@ -114,20 +126,19 @@
 /* Social footer */
 
 .socials {
-  @media screen and (min-width:320px) and (max-width: 767px) {
-  margin: 60px 137px;
-}
-  
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
-  @media screen and (min-width:768px) {
-      margin-bottom: 102px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 102px;
+  }
 
-    @media screen and (min-width:1200px) {
-      margin-top: 12px;
-  margin-right: 93px;
-  margin-bottom: 0;
-    }
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
 
   &__title {
     margin-bottom: 20px;
@@ -174,11 +185,10 @@
 
 /* Footer form */
 .subscription {
-
-  @media screen and (min-width:1200px) {
-      margin-top: 12px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
   }
-  
+
   &__title {
     margin-bottom: 20px;
     font-weight: 700;
@@ -194,8 +204,8 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    @media screen and (min-width:1200px) {
-    flex-wrap: nowrap;
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
     }
   }
 
@@ -204,17 +214,15 @@
     width: 100%;
     max-width: 450px;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: 768px) {
       width: 450px;
     }
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
       margin-bottom: 0;
       margin-right: 12px;
       max-width: 358px;
-      
     }
-    
   }
 
   &__input {
@@ -234,7 +242,7 @@
     background-color: var(--background-black-color);
     transition: border-color 250ms var(--transition-timing-function);
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 1200px) {
       width: 358px;
     }
 
