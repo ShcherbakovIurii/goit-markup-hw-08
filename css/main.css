@@ -717,14 +717,12 @@ img {
           justify-content: center;
   text-align: center;
 }
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .address {
-    margin-bottom: 60px;
-    padding-right: 109px;
-    padding-left: 109px;
+  .footer__container {
+    gap: 60px 165px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .address {
     margin-right: 165px;
@@ -821,7 +819,8 @@ img {
 /* Social footer */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .socials {
-    margin-bottom: 60px;
+    -ms-flex-preferred-size: calc(50% - 83px);
+        flex-basis: calc(50% - 83px);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1120,8 +1119,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 480px;
-  height: 796px;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1420,7 +1420,6 @@ img {
 
 .hero {
   width: 480px;
-  height: 400px;
   margin: 0 auto;
   padding: 118px 0;
   background-color: var(--background-black-color);
@@ -1458,8 +1457,7 @@ img {
   .hero {
     max-width: 1600px;
     width: 100%;
-    height: 600px;
-    padding-top: 200px;
+    padding: 200px 0;
     background-image: -webkit-gradient(linear, left top, left bottom, from(var(--gradient-hero-color)), to(var(--gradient-hero-color))), url("../img/hero-desktop.webp");
     background-image: linear-gradient(var(--gradient-hero-color), var(--gradient-hero-color)), url("../img/hero-desktop.webp");
   }
@@ -1545,9 +1543,14 @@ img {
   transition: transform 250ms var(--transition-timing-function);
   transition: transform 250ms var(--transition-timing-function), -webkit-transform 250ms var(--transition-timing-function);
 }
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .modal {
+    padding: 40px 20px;
+  }
+}
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .modal {
-    width: 350px;
+    width: calc(100% - 30px);
     height: 100%;
   }
 }
@@ -1755,7 +1758,6 @@ img {
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .form__button {
     margin-left: 58px;
-    width: 150px;
     padding: 0;
     font-size: 14px;
   }
@@ -2136,8 +2138,10 @@ img {
     padding-bottom: 30px;
   }
 }
+.team__box {
+  padding: 30px 10px 16px;
+}
 .team__title {
-  margin-top: 30px;
   margin-bottom: 10px;
   text-align: center;
   color: var(--title-text-color);
@@ -2148,7 +2152,6 @@ img {
   letter-spacing: 0.03em;
 }
 .team__text {
-  margin-bottom: 16px;
   text-align: center;
   font-style: normal;
   font-weight: 400;
